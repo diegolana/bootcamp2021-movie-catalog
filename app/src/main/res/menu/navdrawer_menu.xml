@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navMenuComingSoon"
+        android:title="Coming Soon" />
+    <item
+        android:id="@+id/navMenuInTheaters"
+        android:title="In Theaters" />
+    <item
+        android:id="@+id/navMenuTopRated"
+        android:title="Top Rated" />
+    <item
+        android:id="@+id/navMenuTopRated2"
+        android:title="Trending Now" />
+    <item
+        android:id="@+id/navMenuIndian1"
+        android:title="Indian Selections" />
+    <item
+        android:id="@+id/navMenuIndian2"
+        android:title="Best Indian" />
+
+</menu>
