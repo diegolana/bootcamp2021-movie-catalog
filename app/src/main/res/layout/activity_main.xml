@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:onClick="next">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewMovie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewMovie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStoryline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:srcCompat="@drawable/mv5bmdu2zwjlmjktmtrhmy00zta5lwezndgtymnm" />
+
+
+    <TextView
+        android:id="@+id/textViewStoryline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint."
+        android:textSize="16sp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMovie" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
