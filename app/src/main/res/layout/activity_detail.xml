@@ -5,6 +5,7 @@
     tools:context=".DetailActivity">
 
     <data>
+
         <variable
             name="movie"
             type="br.com.diegolana.bootcamp2021.MovieObj" />
@@ -15,45 +16,63 @@
         android:layout_height="match_parent"
         android:background="@drawable/main_gradient_background">
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:layout_marginTop="30dp"
-            android:text="Movie Title"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageViewMovie"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageViewMovie"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:adjustViewBounds="true"
-            app:layout_constraintBottom_toTopOf="@+id/textViewStoryline"
+        <ScrollView
+            android:id="@+id/scrollViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
-            app:srcCompat="@drawable/mv5bmdu2zwjlmjktmtrhmy00zta5lwezndgtymnm" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewStoryline"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:textColor="@color/white"
-            android:text="Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint."
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewMovie" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:text="@{movie.title}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@id/imageViewMovie"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Movie Title" />
+
+                <ImageView
+                    android:id="@+id/imageViewMovie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewStoryline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+                    tools:srcCompat="@drawable/mv5bmdu2zwjlmjktmtrhmy00zta5lwezndgtymnm" />
+
+                <TextView
+                    android:id="@+id/textViewStoryline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:text="@{movie.storyline}"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewMovie"
+                    tools:text="Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint.Lorem ipsum dolor sit amet. Qui nihil velit ab voluptatem molestiae in repellendus neque ut vero dignissimos. Aut enim repellat sed rerum iure At omnis sint."
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
